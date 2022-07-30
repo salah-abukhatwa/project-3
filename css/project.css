@@ -1,3 +1,10 @@
+/* start Global Rules */
+:root {
+    --main-color: #2196f3;
+    --main-color-alt: #1787e0;
+    --main-transittion: 0.3s;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -8,6 +15,10 @@ html {
 
 body {
     font-family: 'Cairo', sans-serif;
+}
+
+a {
+    text-decoration: none;
 }
 
 ul {
@@ -45,3 +56,91 @@ ul {
 }
 
 /* End Global Rules */
+
+/* Start header */
+.header {
+    background-color: white;
+    position: relative;
+    box-shadow: 0 0 10px #ddd;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.header .logo {
+    color: var(--main-color);
+    font-size: 26px;
+    font-weight: bold;
+    height: 92px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 767px) {
+    .header .logo {
+        width: 100%;
+        height: 50px;
+    }
+}
+
+.header .main-nav {
+    display: flex;
+}
+
+@media (max-width: 767px) {
+    .header .main-nav {
+        margin: auto;
+    }
+}
+
+.header .main-nav>li>a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 92px;
+    position: relative;
+    overflow: hidden;
+    color: black;
+    padding: 0 30px;
+    transition: var(--main-transittion);
+    -webkit-transition: var(--main-transittion);
+    -moz-transition: var(--main-transittion);
+    -ms-transition: var(--main-transittion);
+    -o-transition: var(--main-transittion);
+}
+
+@media (max-width: 767px) {
+    .header .main-nav>li>a {
+        padding: 10px;
+        height: 40px;
+        font-size: 13px;
+    }
+}
+
+.header .main-nav>li>a::before {
+    content: "";
+    width: 100%;
+    background-color: var(--main-color);
+    height: 4px;
+    position: absolute;
+    top: 0px;
+    left: -100%;
+    transition: var(--main-transittion);
+}
+
+.header .main-nav>li>a:hover {
+    color: var(--main-color);
+    background-color: #fafafa;
+}
+
+.header .main-nav>li>a:hover::before {
+    left: 0%;
+}
+
+/* End header */
