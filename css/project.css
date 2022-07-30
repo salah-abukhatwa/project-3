@@ -144,3 +144,18 @@ ul {
 }
 
 /* End header */
+/* start Landing */
+.landing {}
+
+.landing::before {
+    content: "";
+}
+
+.landing .container {}
+
+.landing.image.img {
+    width: 600px;
+    max-width: 100%;
+}
+
+/* End Landing */
