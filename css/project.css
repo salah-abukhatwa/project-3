@@ -93,10 +93,18 @@ ul {
     display: flex;
 }
 
+
+
 @media (max-width: 767px) {
     .header .main-nav {
         margin: auto;
     }
+}
+
+.header .main-nav li:hover .mega-menu{
+  z-index: 99;
+  opacity: 1;
+  top: calc(100% + 1px);
 }
 
 .header .main-nav>li>a {
@@ -141,6 +149,94 @@ ul {
 
 .header .main-nav>li>a:hover::before {
     left: 0%;
+}
+
+.header .mega-menu{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    padding: 30px;
+    background-color: white;
+    z-index: -1;
+    opacity:0;
+    border-bottom: solid var(--main-color);
+    display: flex;
+    gap: 40px;
+    top: calc(100% + 50px);
+    transition: top var(--main-transittion) , opacity var(--main-transittion) ;
+    -webkit-transition: top var(--main-transittion) , opacity var(--main-transittion) ;
+    -moz-transition: top var(--main-transittion) , opacity var(--main-transittion) ;
+    -ms-transition: top var(--main-transittion) , opacity var(--main-transittion) ;
+    -o-transition: top var(--main-transittion) , opacity var(--main-transittion) ;
+}
+
+@media (max-width:767px) {
+    .header .mega-menu{
+    flex-direction: column;
+    gap: 0;
+    padding: 5px;
+    }
+}
+.header .mega-menu .image img{
+  max-width: 100%;
+}
+@media (max-width:991px) {
+    .header .mega-menu .image img{
+        display: none;
+    }
+}
+
+.header .mega-menu .links{
+    min-width: 210px;
+    flex: 1;
+}
+.header .mega-menu .links li{
+  position: relative;
+
+}
+.header .mega-menu .links li:not(:last-child) {
+  border-bottom: solid 1px #e9e6e6;
+}
+@media (max-width:767px){
+.header .mega-menu .links:first-of-type li:last-of-type{
+    border-bottom: solid 1px #e9e6e6;
+}
+}
+
+.header .mega-menu .links li::before{
+    position: absolute;
+    content: "";
+    background-color:#fafafa;
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: var(--main-transittion);
+    -webkit-transition: var(--main-transittion);
+    -moz-transition: var(--main-transittion);
+    -ms-transition: var(--main-transittion);
+    -o-transition: var(--main-transittion);
+}
+.header .mega-menu .links li:hover::before{
+  width:100% ;
+}
+.header .mega-menu .links li::before{
+   content: "";
+}
+.header.mega-menu .links li:hover::before{
+width: 100%;
+}
+.header .mega-menu .links li a{
+   color: var(--main-color);
+   display: block;
+   padding: 15px;
+   font-size: 18px;
+   font-weight: bold;
+
+}
+.header .mega-menu .links li a i{
+    margin-right: 10px;
 }
 
 /* End header */
