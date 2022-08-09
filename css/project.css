@@ -894,7 +894,7 @@ gap: 20px;
  /* End Team */
 
  /* Start Services */
- /* End Services */
+ 
 .services {
     padding-top: var(--padding-top);
     padding-bottom: var(--padding-bottom);
@@ -1010,13 +1010,147 @@ gap: 20px;
     text-decoration: none;
     color: var(--main-color);
 }
+/* End Services */
+
+/* Start Skills */
+   .our-skills{
+        padding-top: var(--padding-top);
+        padding-bottom: var(--padding-bottom);
+   } 
+   .container{
+   display: flex;
+   align-items: center;
+   }
+   @media (max-width:991px) {
+    .our-skills .container img{
+       display: none;
+    }
+   }
+   .our-skills .skills{
+    flex: 1;
+   }
+   .our-skills .skill  h3{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+   }
+   .our-skills .skill h3 span{
+    font-size: 12px;
+    color: var(--main-color);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 3px 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.our-skills .skills .the-progress{
+    position: relative;
+    background-color: #e4e4e4;
+    height: 30px;
+   
+}
+.our-skills  .the-progress span{
+    position: absolute;
+    background-color: var(--main-color);
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+/* End Skills */
+
+/* Start Work */
+.work{
+padding-top: var(--padding-top);
+    padding-bottom: var(--padding-bottom);
+    background-color: var(--section-background);
+    position: relative;
+}
+
+.work .container{
+display: flex;
+justify-content:space-around;
+align-items: center;
+gap: 100px;
+}
+ @media (max-width:991px) {
+     .work .container  {
+        flex-direction: column;
+     }
+ }
+.work .container .imge{
+max-width: 100%;
+}
+.work .container .info{
+
+}
+.work .container .box{
+  display: flex;
+  position: relative;
+  align-items: center;
+  background-color: #f5f5f5;
+  padding: 20px;
+  margin-bottom: 20px;
+  gap: 30px;
+  border: 1px solid white;
+  border-radius:6px ;
+  -webkit-border-radius:6px ;
+  -moz-border-radius:6px ;
+  -ms-border-radius:6px ;
+  -o-border-radius:6px ;
+  z-index: 1;
+}
+
+.work .container .box::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    background-color: #dedede;
+    height:0;
+    width: 0;
+    -webkit-transform: translate(-50% , -50%);
+    -moz-transform: translate(-50% , -50%);
+    -ms-transform: translate(-50% , -50%);
+    -o-transform: translate(-50% , -50%);
+    z-index: -1;
+    transition: var(--main-transittion);
+    -webkit-transition: var(--main-transittion);
+    -moz-transition: var(--main-transittion);
+    -ms-transition: var(--main-transittion);
+    -o-transition: var(--main-transittion);
+}
+
+.work .container .box:hover::before{
+    height: 100%;
+    width: 100%;
+
+}
+.work .box img{
+ width: 60px;
+ margin-left: 15px;
+ 
+}
+.work .box h3{
+   margin: 0;
+   font-size: 22px;
+}
+.work .box p{
+color: #777;
+font-size: 18px;
+line-height: 1.7;
+
+}
+/* End Work */
 
 /* Start animation */
  @keyframes up-and-down {
     0% , 100%{
         top: 0;
     }
-    50%{
+      50%{
         top: -50px;
     }
  }
