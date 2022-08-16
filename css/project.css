@@ -1062,7 +1062,7 @@ gap: 20px;
 
 /* Start Work */
 .work{
-padding-top: var(--padding-top);
+    padding-top: var(--padding-top);
     padding-bottom: var(--padding-bottom);
     background-color: var(--section-background);
     position: relative;
@@ -1144,6 +1144,335 @@ line-height: 1.7;
 
 }
 /* End Work */
+
+/* Start events */
+   .events{
+    padding-top: var(--padding-top);
+        padding-bottom: var(--padding-bottom);
+        background-color:withe ;
+        position: relative;
+   }
+   .events .container{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+   }
+   .events .container img{
+    max-width: 450px;
+   }
+   @media (max-width:991px) {
+    .events .container img{
+           display: none;
+       }
+   }
+   .events .info{
+    flex: 1;
+   }
+   .events .info .time{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 20px auto;
+  justify-content: center;  
+   }
+   .events .info .unit{
+    border: 1px solid #D4D4D4;
+    border-radius: 6px;
+    -webkit-border-radius: 6PX;
+    -moz-border-radius: 6PX;
+    -ms-border-radius: 6PX;
+    -o-border-radius: 6PX;
+    width: 75px;
+    text-align: center;
+    transition: var(--main-transittion);
+    -webkit-transition: var(--main-transittion);
+    -moz-transition: var(--main-transittion);
+    -ms-transition: var(--main-transittion);
+    -o-transition: var(--main-transittion);
+}
+.events .info .unit span{
+    display: block;
+    transition: var(--main-transittion);
+    -webkit-transition: var(--main-transittion);
+    -moz-transition: var(--main-transittion);
+    -ms-transition: var(--main-transittion);
+    -o-transition: var(--main-transittion);
+}
+   .events .info .unit span:first-child{
+    font-size: 35px;
+    padding: 15px;
+    color: var(--main-color);
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+   }
+   .events .info .unit span:last-child{
+    border-top: 1px solid #D4D4D4;
+    font-size: 15px;
+    padding: 8px 10px;
+   }
+
+   .events .info .unit:hover , 
+   .events .info .unit:hover span:last-child{
+    border-color: var(--main-color);
+   }
+   .events .subscribe{
+    width: 100%;
+    margin-top: 50px;
+    
+   }
+   .events .title{
+    text-align: center;
+    margin: 40px 0 0 ;
+    font-size: 30px;
+   }
+
+   .events .discription{
+    text-align: center;
+    line-height: 1.7;
+    color: #777;
+    font-size: 19px;
+   }
+
+   .events .subscribe form{
+    width: 600px;
+    margin: 20px auto;
+    padding: 30px 40px;
+    background-color: #f5f6f6;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    display: flex;
+    gap: 20px;
+}
+
+ @media (max-width:767px) {
+    .events .subscribe form {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        max-width: 100%;
+        border-radius: 0;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        -ms-border-radius: 0;
+        -o-border-radius: 0;
+}
+ }
+   .events .subscribe form input[type="email"]{
+    padding: 20px;
+    border-radius: 50px;
+    border: none;
+    caret-color: var(--main-color);
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    flex: 1;
+}
+.events .subscribe form input[type="email"]:focus{
+    outline: none;
+}
+.events .subscribe form input[type="email"]::placeholder{
+    transition: opacity var(--main-transittion);
+    -webkit-transition: opacity var(--main-transittion);
+    -moz-transition: opacity var(--main-transittion);
+    -ms-transition: opacity var(--main-transittion);
+    -o-transition: opacity var(--main-transittion);
+}
+
+.events .subscribe form input[type="email"]:focus::placeholder{
+    opacity: 0;
+}
+
+@media (max-width:767px) {
+.events .subscribe form input[type="email"] {
+            border-radius: 0;
+            -webkit-border-radius: 0;
+            -moz-border-radius: 0;
+            -ms-border-radius: 0;
+            -o-border-radius: 0;
+}
+}
+   .events .subscribe form input[type="submit"]{
+      border-radius: 50px;
+      -webkit-border-radius: 50px;
+      -moz-border-radius: 50px;
+      -ms-border-radius: 50px;
+      -o-border-radius: 50px;
+      background-color: var(--main-color);
+      border: none;
+      color: white;
+      font-weight: bold;
+      padding: 20px;
+      cursor: pointer;
+      transition: var(--main-transittion);
+      -webkit-transition: var(--main-transittion);
+      -moz-transition: var(--main-transittion);
+      -ms-transition: var(--main-transittion);
+      -o-transition: var(--main-transittion);
+}
+.events .subscribe form input[type="submit"]:hover{
+    background-color: var(--main-color-alt);
+}
+
+@media (max-width:767px) {
+    .events .subscribe form input[type="submit"] {
+        border-radius: 0;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        -ms-border-radius: 0;
+        -o-border-radius: 0;
+    }
+}
+/* End events */
+
+/* Start Pricing */
+.pricing {
+    padding-top: var(--padding-top);
+    padding-bottom: var(--padding-bottom);
+    background-color: var(--section-background);
+    
+}
+
+.pricing .container {
+display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.pricing .box{
+     position: relative;
+     box-shadow: 0px 2px 6px 0px rgb(0 0 0 /17%), 0px 2px 4px 0px rgb(0 0 0 / 12%);
+     background-color: white;
+     text-align: center;
+     transition:var(--main-transittion) ;
+     z-index: 1;
+     -webkit-transition:var(--main-transittion) ;
+     -moz-transition:var(--main-transittion) ;
+     -ms-transition:var(--main-transittion) ;
+     -o-transition:var(--main-transittion) ;
+}
+
+.pricing .box::before ,
+.pricing .box::after{
+    content: "";
+    position: absolute;
+    height: 50%;
+    width: 0;
+    background-color: #f6f6f6;
+    z-index: -1;
+    transition: var(--main-transittion);
+    -webkit-transition: var(--main-transittion);
+    -moz-transition: var(--main-transittion);
+    -ms-transition: var(--main-transittion);
+    -o-transition: var(--main-transittion);
+}
+.pricing .box::before{
+    left: 0;
+    top: 0;
+}
+.pricing .box::after{
+    right: 0;
+   bottom: 0;
+}
+
+.pricing .box:hover::before ,.pricing .box:hover::after{
+    width: 100%;
+}
+@media (min-width:1200px) {
+    .pricing .box.popular {
+        top: -20px;
+    }
+}
+
+.pricing .box .label{
+    position: absolute;
+    writing-mode:vertical-rl;
+    -webkit-writing-mode:vertical-rl;
+    -ms-writing-mode:vertical-rl;
+    background-color: var(--main-color);
+    color: white;
+    font-weight: bold;
+    padding: 10px 10px 35px;
+    font-size: 18px;
+    right: 20px;
+    width: 40px;
+}
+.pricing .box .label::before{
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border: 20px solid;
+    border-color: transparent transparent white transparent;
+}
+.pricing .box .title{
+    font-weight: bold;
+    margin: 30px 0;
+    letter-spacing: -1px;
+    font-size: 25px;
+}
+.pricing .box img{
+    width: 80px;
+   margin-bottom: 30px;
+}
+.pricing .box .price{
+    margin-bottom: 20px;
+}
+.pricing .box .amount{
+    display: block;
+    font-size: 60px;
+    font-weight: bold;
+    color: var(--main-color);
+    margin-bottom: 5px;
+}
+.pricing .box .time{
+    color: #777;
+}
+.pricing .box ul{
+    text-align: left;
+   
+}
+.pricing .box ul li{
+    padding: 20px;
+        border-top: solid #eee 1px;
+}
+.pricing .box ul li::before{
+    font-family:"Font Awesome 5 Free";
+  content: "\f00c";
+  margin-right: 10px;
+  font-weight: 900;
+  color: var(--main-color);
+}
+.pricing .box a{
+    display: block;
+    width: fit-content;
+    margin: 30px auto 40px;
+    color: var(--main-color);
+    font-weight: bold;
+    border: 2px solid var(--main-color);
+    border-radius: 6px;
+    padding:15px 20px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    transition: var(--main-transittion);
+    -webkit-transition: var(--main-transittion);
+    -moz-transition: var(--main-transittion);
+    -ms-transition: var(--main-transittion);
+    -o-transition: var(--main-transittion);
+}
+.pricing .box a:hover{
+   background-color: var(--main-color-alt); 
+   border-color: var(--main-color-alt);
+   color: white;
+}
+
+/* End Pricing */
 
 /* Start animation */
  @keyframes up-and-down {
